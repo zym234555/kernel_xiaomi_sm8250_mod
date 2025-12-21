@@ -95,7 +95,7 @@ echo "TARGET_DEVICE: $TARGET_DEVICE"
 
 if [ $KSU_ENABLE -eq 1 ]; then
     echo "KSU is enabled"
-    curl -LSs "https://raw.githubusercontent.com/ApartTUSITU/SukiSU-Ultra/main/kernel/setup.sh" | bash -s ApartTUSITU
+    curl -LSs "https://raw.githubusercontent.com/zym234555/SukiSU-Ultra/main/kernel/setup.sh" | bash -s zym234555
 else
     echo "KSU is disabled"
 fi
@@ -111,7 +111,7 @@ git clone https://github.com/liyafe1997/AnyKernel3 -b kona --single-branch --dep
 
 # Add date to local version
 local_version_str="-perf"
-local_version_date_str="-aptusitu-$(date +%Y%m%d)-${GIT_COMMIT_ID}-perf"
+local_version_date_str="-zym234555-$(date +%Y%m%d)-${GIT_COMMIT_ID}-perf"
 
 sed -i "s/${local_version_str}/${local_version_date_str}/g" arch/arm64/configs/${TARGET_DEVICE}_defconfig
 
